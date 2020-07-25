@@ -17,3 +17,10 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+/**
+ * Routes for Questions API
+ * @author Jose Maria Toribio
+ */
+Route::get('/questions', 'QuestionController@index');
+Route::post('/questions', 'QuestionController@store');
